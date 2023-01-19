@@ -1,23 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap');
 
-$clr-primary-100: #ffffff;
-$clr-primary-300: #d9d9d9;
+:root {
+	--clr-primary-100: #ffffff;
+	--clr-primary-300: #d9d9d9;
 
-$clr-neutral-400: #4ee1a0;
-$clr-neutral-500: #242424;
-$clr-neutral-700: #151515;
+	--clr-neutral-400: #4ee1a0;
+	--clr-neutral-500: #242424;
+	--clr-neutral-700: #151515;
 
-$ff-primary: 'Space Grotesk', sans-serif;
+	--ff-primary: 'Space Grotesk', sans-serif;
 
-$fs-300: 2.4rem;
-$fs-400: 3.2rem;
-$fs-700: 4rem;
+	--fs-body: 1.6rem;
+	--fs-300: 2.4rem;
+	--fs-400: 3.2rem;
+	--fs-700: 4rem;
 
-$fs-body: 1.6rem;
+	--fw-regular: 500;
+	--fw-bold: 700;
 
-$fw-regular: 500;
-$fw-bold: 700;
+	--lh-body: 2.6rem;
+	--lh-300: 3.2rem;
+	--lh-400: 4rem;
+	--lh-700: 4rem;
+}
+@media (min-width: 600px) {
+	:root {
+		--fs-300: 3.2rem;
+		--fs-400: 4.8rem;
+		--fs-700: 7.2rem;
 
+		--lh-400: 5.6rem;
+		--lh-700: 7.2rem;
+	}
+}
 *,
 *::before,
 *::after {
@@ -31,7 +46,50 @@ html {
 }
 
 body {
-	font-family: $ff-primary;
-	font-size: $fs-body;
-	font-weight: $fw-regular;
+	font-family: var(--ff-primary);
+	font-size: var(--fs-body);
+	font-weight: var(--fw-regular);
+	line-height: var(--lh-body);
+}
+
+h1,
+.h1 {
+	font-size: var(--fs-700);
+	line-height: var(--lh-700);
+}
+
+h2,
+.h2 {
+	font-size: var(--fs-400);
+	line-height: var(--lh-400);
+}
+
+h3,
+.h3 {
+	font-size: var(--fs-300);
+	line-height: var(--lh-300);
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+.wrapper {
+	display: grid;
+	.heading {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		&__icons {
+			display: flex;
+		}
+	}
+}
+
+img {
+	display: block;
 }
