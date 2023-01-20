@@ -5,7 +5,7 @@ import styles from './header.module.scss';
 
 const Header = () => {
 	return (
-		<header className={styles.wrapper}>
+		<header className={`${styles.wrapper} container`}>
 			<div className={styles.heading}>
 				<p className="h3">mateszucs</p>
 				<ul className={styles.heading__icons}>
@@ -31,15 +31,19 @@ const Header = () => {
 				<source media="(min-width:990px)" srcSet={`${profileDesktop} 2x`} />
 				<source media="(min-width:600px)" srcSet={`${profileTablet} 2x`} />
 				<source srcSet={`${profile} 2x`} />
-				<img src={profile} alt="Profile picture " />
+				<img
+					className={styles.profilePicture}
+					src={profile}
+					alt="Profile picture "
+				/>
 			</picture>
 
-			<div className="heading__body">
-				<h1>
-					Nice to meet you! I&apos;m
-					<span className="underline"> Mate Szucs</span>
+			<div className={styles.headingBody}>
+				<h1 className={styles.headingBody__welcome}>
+					Nice to meet you! I&apos;m{' '}
+					<span className="underline">Mate Szucs</span>
 				</h1>
-				<p>
+				<p className={styles.headingBody__intro}>
 					Based in the UK, I&apos;m a front-end developer passionate about
 					building accessible web apps that users love.
 				</p>

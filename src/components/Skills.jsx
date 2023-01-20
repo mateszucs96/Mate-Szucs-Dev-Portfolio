@@ -1,6 +1,6 @@
 const Skills = () => {
 	return (
-		<section>
+		<section className="container">
 			<ul>
 				<li>
 					<h2>HTML</h2>

@@ -1,6 +1,6 @@
 const SocialLinks = () => {
 	return (
-		<div>
+		<div className="container">
 			<p className="h3">mateszucs</p>
 			<ul>
 				<li>

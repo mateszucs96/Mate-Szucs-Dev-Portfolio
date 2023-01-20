@@ -22,6 +22,7 @@ module.exports = {
 	rules: {
 		'prettier/prettier': ['error', { endOfLine: 'auto' }],
 		'react/react-in-jsx-scope': 'off',
+		'react/prop-types': 'ignore',
 		indent: ['error', 'tab'],
 		'linebreak-style': ['error', 'unix'],
 		quotes: ['error', 'single'],

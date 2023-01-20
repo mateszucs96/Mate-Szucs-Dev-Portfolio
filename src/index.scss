@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap');
 
+$md-screen: 680px;
+
 :root {
 	--clr-primary-100: #ffffff;
 	--clr-primary-300: #d9d9d9;
@@ -22,6 +24,10 @@
 	--lh-300: 3.2rem;
 	--lh-400: 4rem;
 	--lh-700: 4rem;
+
+	--padding: 1.6rem;
+
+	--md-screen: 680px;
 }
 @media (min-width: 600px) {
 	:root {
@@ -31,6 +37,8 @@
 
 		--lh-400: 5.6rem;
 		--lh-700: 7.2rem;
+
+		--padding: 3rem;
 	}
 }
 *,
@@ -50,6 +58,8 @@ body {
 	font-size: var(--fs-body);
 	font-weight: var(--fw-regular);
 	line-height: var(--lh-body);
+	background-color: var(--clr-neutral-700);
+	color: var(--clr-primary-100);
 }
 
 h1,
@@ -78,11 +88,16 @@ li {
 	list-style: none;
 }
 
+img {
+	display: block;
+}
+
 .underline {
 	text-decoration: underline;
 	text-decoration-color: var(--clr-neutral-400);
 }
 
-img {
-	display: block;
+.container {
+	width: min(1110px, 100% - var(--padding) * 2);
+	margin-inline: auto;
 }

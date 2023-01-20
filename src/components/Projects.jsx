@@ -15,7 +15,7 @@ import largePicture6 from '../assets/images/thumbnail-project-6-large.webp';
 
 const Projects = () => {
 	return (
-		<div className={styles.projects}>
+		<div className={`${styles.projects} container`}>
 			<Project
 				mobilePicture={mobilePicture}
 				largePicture={largePicture}
