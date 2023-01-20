@@ -78,16 +78,9 @@ li {
 	list-style: none;
 }
 
-.wrapper {
-	display: grid;
-	.heading {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		&__icons {
-			display: flex;
-		}
-	}
+.underline {
+	text-decoration: underline;
+	text-decoration-color: var(--clr-neutral-400);
 }
 
 img {

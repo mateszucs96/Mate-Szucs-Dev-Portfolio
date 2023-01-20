@@ -1,0 +1,20 @@
+.wrapper {
+	display: grid;
+
+	@media (min-width: 600px) {
+		grid-template-columns: 1fr 1fr;
+	}
+	.heading {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		&__icons {
+			display: flex;
+		}
+	}
+
+	.profileContainer {
+		width: fit-content;
+		margin-inline: auto;
+	}
+}

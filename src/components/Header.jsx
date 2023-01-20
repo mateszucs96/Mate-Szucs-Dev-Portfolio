@@ -1,13 +1,14 @@
 import profile from '../assets/images/image-profile-mobile.webp';
 import profileTablet from '../assets/images/image-profile-tablet.webp';
 import profileDesktop from '../assets/images/image-profile-desktop.webp';
+import styles from './header.module.scss';
 
 const Header = () => {
 	return (
-		<header className="wrapper">
-			<div className="heading">
+		<header className={styles.wrapper}>
+			<div className={styles.heading}>
 				<p className="h3">mateszucs</p>
-				<ul className="heading__icons">
+				<ul className={styles.heading__icons}>
 					<li>
 						<a href="#">A</a>
 					</li>
@@ -25,11 +26,25 @@ const Header = () => {
 					</li>
 				</ul>
 			</div>
-			<picture>
-				<source media="(min-width:990px)" srcSet={`${profileDesktop} 3x`} />
+
+			<picture className={styles.profileContainer}>
+				<source media="(min-width:990px)" srcSet={`${profileDesktop} 2x`} />
 				<source media="(min-width:600px)" srcSet={`${profileTablet} 2x`} />
-				<img src={profile} alt="Profile picture" />
+				<source srcSet={`${profile} 2x`} />
+				<img src={profile} alt="Profile picture " />
 			</picture>
+
+			<div className="heading__body">
+				<h1>
+					Nice to meet you! I&apos;m
+					<span className="underline"> Mate Szucs</span>
+				</h1>
+				<p>
+					Based in the UK, I&apos;m a front-end developer passionate about
+					building accessible web apps that users love.
+				</p>
+				<a href="#">Contact me</a>
+			</div>
 		</header>
 	);
 };
